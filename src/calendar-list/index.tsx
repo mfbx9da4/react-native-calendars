@@ -350,6 +350,7 @@ class CalendarList extends Component<Props, State> {
       <View style={this.style.flatListContainer}>
         <FlatList
           ref={this.list}
+          onScrollEndDrag={this.props.onScrollEndDrag}
           style={[this.style.container, style]}
           // @ts-expect-error
           initialListSize={pastScrollRange + futureScrollRange + 1} // ListView deprecated
